@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{4D4EC834-EC3E-4260-848A-57F70BCED709}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{BD52DB02-59D4-4AE7-B790-438E2770420D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D4EC834-EC3E-4260-848A-57F70BCED709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D4EC834-EC3E-4260-848A-57F70BCED709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D4EC834-EC3E-4260-848A-57F70BCED709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D4EC834-EC3E-4260-848A-57F70BCED709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD52DB02-59D4-4AE7-B790-438E2770420D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD52DB02-59D4-4AE7-B790-438E2770420D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD52DB02-59D4-4AE7-B790-438E2770420D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD52DB02-59D4-4AE7-B790-438E2770420D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
