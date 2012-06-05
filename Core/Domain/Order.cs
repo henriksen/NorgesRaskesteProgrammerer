@@ -34,8 +34,25 @@ namespace Core.Domain
             get { return _orderLines.Count; }
         }
 
-        public void SetStatus(OrderStatus canceled)
+        public decimal Total        
         {
+            get { return _orderLines.Sum(ol => ol.Price); }
+        }
+
+        public void SetStatus(OrderStatus newOrderStatus)
+        {
+            if (Status == OrderStatus.Shipped && newOrderStatus == OrderStatus.Canceled)
+            {
+                throw new InvalidStatusChangeException();
+            }
+            
+            if (Status == OrderStatus.ReadyForShipping && newOrderStatus == OrderStatus.Canceled)
+            {
+                var invoice = new Invoice();
+                invoice.AddInvoiceItem(new InvoiceItem { Cost = this.Total * 0.1m});
+                Customer.AddInvoice(invoice);
+            }
+            Status = newOrderStatus;
         }
 
         public void AddOrderLine(OrderLine orderLine)

@@ -22,7 +22,7 @@ namespace Tests
         [Test]
         public void Order_is_ready_for_shipping_Then_it_should_be_canceled()
         {
-            var order = new Order(null);
+            var order = new Order(new Customer());
             order.SetStatus(OrderStatus.ReadyForShipping);
 
             order.SetStatus(OrderStatus.Canceled);
@@ -34,12 +34,12 @@ namespace Tests
         public void Order_is_ready_for_shipping_Then_it_should_invoice_10percent_of_the_order_total()
         {
             var order = new Order(new Customer());
-            order.AddOrderLine(new OrderLine {Price = 100});
+            order.AddOrderLine(new OrderLine {Price = 100m});
             order.SetStatus(OrderStatus.ReadyForShipping);
 
             order.SetStatus(OrderStatus.Canceled);
 
-            order.Customer.Invoices.First().Total.Should().Be(10);
+            order.Customer.Invoices.First().Total.Should().Be(10m);
         }
 
         [Test]

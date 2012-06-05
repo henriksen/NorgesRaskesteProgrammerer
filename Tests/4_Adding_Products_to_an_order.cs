@@ -17,5 +17,16 @@ namespace Tests
 
             order.OrderLineCount.Should().Be(1);
         }
+
+        [Test]
+        public void AddOrderLine_updates_the_Order_Total()
+        {
+            var order = new Order(null);
+
+            order.AddOrderLine(new OrderLine { Price = 1.1m });
+            order.AddOrderLine(new OrderLine { Price = 2.2m });
+
+            order.Total.Should().Be(3.3m);
+        }
     }
 }
