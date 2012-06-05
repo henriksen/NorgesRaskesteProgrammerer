@@ -36,7 +36,23 @@ namespace Core.Domain
 
         public decimal Total        
         {
-            get { return _orderLines.Sum(ol => ol.Price); }
+            get
+            {
+                var sum = _orderLines.Sum(ol => ol.Price);
+                return sum - Discount;
+            }
+        }
+
+        public decimal Shipping { get { return Total > 500 ? 0 : 125; } }
+
+        public decimal Discount
+        {
+            get
+            {
+                var sum = _orderLines.Sum(ol => ol.Price);
+                if (sum > 10000m) return sum * 0.1m;
+                return 0;
+            }
         }
 
         public void SetStatus(OrderStatus newOrderStatus)
