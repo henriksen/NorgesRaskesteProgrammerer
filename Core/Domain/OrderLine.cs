@@ -1,6 +1,6 @@
 namespace Core.Domain
 {
-    public class Product {
+    public class OrderLine {
         public decimal Price { get; set; }
     }
 }

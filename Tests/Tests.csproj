@@ -45,11 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adding_Invoces_to_a_Customer.cs" />
-    <Compile Include="Adding_items_to_an_Invoice.cs" />
-    <Compile Include="Adding_Products_to_an_order.cs" />
-    <Compile Include="Order_being_canceled.cs" />
-    <Compile Include="Order_being_created.cs" />
+    <Compile Include="2_Adding_Invoces_to_a_Customer.cs" />
+    <Compile Include="3_Adding_items_to_an_Invoice.cs" />
+    <Compile Include="4_Adding_Products_to_an_order.cs" />
+    <Compile Include="5_Order_being_canceled.cs" />
+    <Compile Include="1_Order_being_created.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

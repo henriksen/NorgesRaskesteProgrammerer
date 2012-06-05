@@ -13,7 +13,7 @@ namespace Tests
         {
             var order = new Order(null);
             
-            order.AddOrderLine(new Product());
+            order.AddOrderLine(new OrderLine());
 
             order.OrderLineCount.Should().Be(1);
         }

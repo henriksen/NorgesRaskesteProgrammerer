@@ -19,6 +19,7 @@ namespace Tests
             order.Status.Should().Be(OrderStatus.Canceled);
         }
 
+        [Test]
         public void Order_is_ready_for_shipping_Then_it_should_be_canceled()
         {
             var order = new Order(null);
@@ -29,11 +30,11 @@ namespace Tests
             order.Status.Should().Be(OrderStatus.Canceled);
         }
 
-
+        [Test]
         public void Order_is_ready_for_shipping_Then_it_should_invoice_10percent_of_the_order_total()
         {
             var order = new Order(new Customer());
-            order.AddOrderLine(new Product {Price = 100});
+            order.AddOrderLine(new OrderLine {Price = 100});
             order.SetStatus(OrderStatus.ReadyForShipping);
 
             order.SetStatus(OrderStatus.Canceled);
