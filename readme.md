@@ -9,6 +9,8 @@ The two files start.ps1 and stop.ps1 are Powershell scripts intended to record t
 
 This is the project used in the competition, made public since someone wanted it :) Feel free to use it for what ever you want. Please note that the code is written solely with the purpose of using it in a competition and not intended for any other purpose, including education or to reflect any sort of best practice. If you copy and paste this stuff into production [you're on your own][4]. Your mileage may vary, etc, etc. 
 
+It's a Visual Studio 2012 project and if you want to have a go at it, the best time was just shy of 10 minutes: 9:05 But remember, you're not doing it on a conference floor with the pressure of a competition hanging over your head :)
+
 Happy coding!
 
 [1]:http://www.ndcoslo.com/
